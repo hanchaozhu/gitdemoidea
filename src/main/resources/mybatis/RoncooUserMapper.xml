@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.mapper.RoncooUserMapper">
+    <insert id="insert" parameterType="com.example.bean.Owner">
+        <!--<selectKey keyProperty="id" resultType="java.lang.Integer" order="BEFORE">-->
+        <!--SELECT area_sequence.nextval from dual-->
+        <!--</selectKey>-->
+        insert into T_AREA (id, name,chainid)
+        values (AREA_SEQUENCE.nextval,  #{name},AREA_CHAINID_SEQUENCE.nextval)
+    </insert>
+
+</mapper>
